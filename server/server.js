@@ -52,7 +52,7 @@ hbs.registerPartials(__dirname + '/views/partials'); // Path to your partials
 app.get("/home",(req,res)=>{
 
     res.render("home",{
-        username:"Krishna",
+        username:"Koustubh",
         
     })
 })
