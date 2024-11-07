@@ -5,7 +5,7 @@ const {
     doctorRegister,
     getAllDoctors
     // loginUser
-} = require("../controllers/doctorcontroller")
+} = require("../controllers/doctorController")
 
 router.get("/", getAllDoctors)
 
