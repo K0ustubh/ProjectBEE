@@ -47,8 +47,8 @@ app.get("/home", async (req, res) => {
     // Fetch all uploaded files from MongoDB
     const files = await File.find();
     res.render("home", {
-        username: "Koustubh",
-        users: [{ name: "Krishna", age: 20 }, { name: "Himesh", age: 20 }],
+        username: "Jai",
+        users: [{ name: "John Doe", age: 30 }, { name: "Jane Smith", age: 25 }],
         files: files 
     });
 });
@@ -62,8 +62,10 @@ app.get("/alluser", (req, res) => {
 });
 
 
-app.use("/api/user", require("./routes/userRoutes")); // Registration route
-app.use("/api/doctors", require("./routes/doctorRoutes"));
+app.use("/api/user", require("./routes/userRoutes")); 
+app.use("/api/newsletter",require("./routes/newsletterRoutes"));
+app.use("/api/doctor", require("./routes/doctorRoutes"));
+
 
 // Route to handle file upload and save metadata in MongoDB
 app.post('/profile', upload.single('avatar'), async (req, res) => {

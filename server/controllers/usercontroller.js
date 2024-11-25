@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const User = require("../model/userModel"); // User model to interact with the database
+const User = require("../model/userModel");
 require("dotenv").config();
 
 // Register a new user
